@@ -1,0 +1,1601 @@
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b0f">
+  <meta name="description"
+    content="ÖZYAKIŞIR GROUP — Gayrimenkul, inşaat, otomotiv, ticaret ve yatırım alanlarında geleceğe değer katıyoruz.">
+  <title>ÖZYAKIŞIR GROUP | Geleceğe Değer Katıyoruz</title>
+  <style>
+    :root {
+      --bg: #090b0f;
+      --panel: #11151b;
+      --panel2: #171c23;
+      --gold: #c9a96e;
+      --gold2: #f0d8a6;
+      --text: #f4f2ed;
+      --muted: #a4a8af;
+      --line: rgba(255, 255, 255, .12);
+      --max: 1240px
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase
+    }
+
+    .section {
+      padding: 110px 0
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 42px
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      line-height: 1.03;
+      letter-spacing: -.055em;
+      font-weight: 800;
+      max-width: 760px;
+      margin-top: 12px
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 520px;
+      font-size: 1rem
+    }
+
+    .gold {
+      color: var(--gold)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #101114;
+      font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      transition: .25s;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: var(--gold2);
+      border-color: var(--gold2);
+      transform: translateY(-3px)
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: var(--text);
+      border-color: rgba(255, 255, 255, .35)
+    }
+
+    .btn.outline:hover {
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .topbar {
+      height: 5px;
+      background: linear-gradient(90deg, #6f5225, var(--gold2), #8a682e)
+    }
+
+    header {
+      position: fixed;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      background: rgba(9, 11, 15, .78);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent;
+      transition: .3s
+    }
+
+    header.scrolled {
+      border-color: var(--line);
+      background: rgba(9, 11, 15, .94)
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 1.15rem;
+      transform: rotate(45deg)
+    }
+
+    .brand-mark span {
+      transform: rotate(-45deg)
+    }
+
+    .brand-name {
+      font-size: .9rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      line-height: 1.25
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--gold);
+      font-size: .57rem;
+      letter-spacing: .28em;
+      margin-top: 4px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px
+    }
+
+    .nav-links a {
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .07em;
+      color: #d7d8db;
+      transition: .2s
+    }
+
+    .nav-links a:hover {
+      color: var(--gold)
+    }
+
+    .nav-cta {
+      white-space: nowrap;
+      padding: 11px 14px;
+      font-size: .66rem
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      color: white;
+      padding: 8px 11px;
+      font-size: 1.2rem
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      background: #10141a;
+      overflow: hidden
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(90deg, rgba(5, 7, 10, .94) 0%, rgba(5, 7, 10, .76) 45%, rgba(5, 7, 10, .18) 100%), linear-gradient(0deg, var(--bg), transparent 38%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=85') center/cover
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at 75% 45%, rgba(201, 169, 110, .14), transparent 32%);
+      pointer-events: none
+    }
+
+    .hero-content {
+      padding-top: 100px;
+      padding-bottom: 90px;
+      max-width: 880px
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px
+    }
+
+    .hero-kicker:before {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background: var(--gold)
+    }
+
+    .hero h1 {
+      font-size: clamp(3.4rem, 9.2vw, 8.5rem);
+      line-height: .91;
+      letter-spacing: -.075em;
+      font-weight: 900;
+      margin: 24px 0 28px;
+      text-transform: uppercase
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: -.06em
+    }
+
+    .hero p {
+      max-width: 590px;
+      color: #d3d5d8;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      margin-bottom: 32px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .hero-bottom {
+      position: absolute;
+      bottom: 32px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #c1c3c7;
+      font-size: .65rem;
+      letter-spacing: .16em;
+      text-transform: uppercase
+    }
+
+    .scroll-cue {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .scroll-cue:before {
+      content: "";
+      height: 1px;
+      width: 42px;
+      background: var(--gold)
+    }
+
+    .hero-index {
+      color: var(--gold)
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    .intro-art {
+      min-height: 560px;
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85') center/cover
+    }
+
+    .intro-art:after {
+      content: "";
+      position: absolute;
+      inset: 18px -18px -18px 18px;
+      border: 1px solid rgba(201, 169, 110, .65);
+      z-index: -1
+    }
+
+    .art-label {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(8, 10, 13, .84);
+      padding: 16px 20px;
+      border-left: 2px solid var(--gold);
+      font-size: .72rem;
+      letter-spacing: .13em
+    }
+
+    .intro-copy h2 {
+      margin-bottom: 24px
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin: 0 0 18px
+    }
+
+    .word-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .14em
+    }
+
+    .word-strip span:after {
+      content: " /";
+      color: var(--gold);
+      margin-left: 20px
+    }
+
+    .word-strip span:last-child:after {
+      content: ""
+    }
+
+    .sectors {
+      background: linear-gradient(180deg, #0c0f14, #10141a)
+    }
+
+    .sector-list {
+      border-top: 1px solid var(--line)
+    }
+
+    .sector {
+      display: grid;
+      grid-template-columns: 90px 1fr 1.1fr 50px;
+      gap: 28px;
+      align-items: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      transition: padding .3s
+    }
+
+    .sector:hover {
+      padding-left: 14px;
+      padding-right: 14px;
+      background: linear-gradient(90deg, rgba(201, 169, 110, .08), transparent)
+    }
+
+    .sector-num {
+      font-size: .75rem;
+      color: var(--gold);
+      letter-spacing: .1em
+    }
+
+    .sector h3 {
+      font-size: clamp(1.3rem, 3vw, 2.4rem);
+      letter-spacing: -.04em
+    }
+
+    .sector p {
+      color: var(--muted);
+      font-size: .9rem;
+      max-width: 500px
+    }
+
+    .sector-arrow {
+      font-size: 1.5rem;
+      color: var(--gold);
+      transition: .25s
+    }
+
+    .sector:hover .sector-arrow {
+      transform: translate(5px, -5px)
+    }
+
+    .founder {
+      position: relative;
+      overflow: hidden;
+      background: #10141a
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 76px;
+      align-items: center
+    }
+
+    .portrait {
+      min-height: 570px;
+      background: linear-gradient(0deg, rgba(8, 10, 13, .25), rgba(8, 10, 13, .05)), url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85') center/cover;
+      position: relative;
+      filter: grayscale(100%)
+    }
+
+    .portrait:after {
+      content: "PORTRE ALANI · FOTOĞRAFI DEĞİŞTİRİN";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(8, 10, 13, .82);
+      padding: 14px;
+      color: var(--gold);
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-align: center
+    }
+
+    .founder-copy h2 {
+      margin-bottom: 12px
+    }
+
+    .founder-name {
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      margin: 24px 0 0
+    }
+
+    .founder-role {
+      color: var(--gold);
+      font-size: .72rem;
+      letter-spacing: .16em;
+      font-weight: 800
+    }
+
+    .founder-copy p {
+      color: var(--muted);
+      margin: 22px 0
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .person {
+      border-top: 1px solid var(--gold);
+      background: linear-gradient(145deg, #171c23, #0d1015);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      min-height: 370px;
+      transition: transform .3s, border-color .3s
+    }
+
+    .person:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold2)
+    }
+
+    .person-avatar {
+      height: 125px;
+      background: linear-gradient(135deg, #222a34, #11151b);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 2.4rem;
+      margin-bottom: 22px
+    }
+
+    .person h3 {
+      font-size: 1.25rem;
+      line-height: 1.2;
+      margin-bottom: 8px
+    }
+
+    .person .role {
+      color: var(--gold);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      margin-bottom: 14px
+    }
+
+    .person p {
+      color: var(--muted);
+      font-size: .86rem;
+      flex: 1
+    }
+
+    .person-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 20px;
+      flex-wrap: wrap
+    }
+
+    .person-actions a {
+      border: 1px solid var(--line);
+      padding: 9px 11px;
+      font-size: .66rem;
+      font-weight: 800;
+      letter-spacing: .07em
+    }
+
+    .person-actions a:hover {
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .vision {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      background: #13171d
+    }
+
+    .vision:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(7, 9, 12, .94), rgba(7, 9, 12, .42)), url('https://images.unsplash.com/photo-1511812376148-9b5f6b8f7f6b?auto=format&fit=crop&w=2000&q=85') center/cover
+    }
+
+    .vision h2 {
+      max-width: 980px;
+      font-size: clamp(2.5rem, 7vw, 6.5rem)
+    }
+
+    .vision h2 span {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 500
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      margin-top: 42px
+    }
+
+    .value {
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      min-height: 190px
+    }
+
+    .value .num {
+      color: var(--gold);
+      font-size: .72rem;
+      letter-spacing: .15em
+    }
+
+    .value h3 {
+      font-size: 1.15rem;
+      margin: 18px 0 8px
+    }
+
+    .value p {
+      font-size: .87rem;
+      color: var(--muted)
+    }
+
+    .timeline {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      position: relative;
+      gap: 18px
+    }
+
+    .timeline:before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--line)
+    }
+
+    .milestone {
+      padding-top: 32px;
+      position: relative
+    }
+
+    .milestone:before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(201, 169, 110, .12)
+    }
+
+    .milestone h3 {
+      font-size: .9rem;
+      letter-spacing: .08em;
+      margin-bottom: 10px
+    }
+
+    .milestone p {
+      font-size: .82rem;
+      color: var(--muted)
+    }
+
+    .portfolio {
+      background: #10141a
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1fr;
+      grid-auto-rows: 270px;
+      gap: 14px
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      background: #1a2028;
+      isolation: isolate
+    }
+
+    .project:first-child {
+      grid-row: span 2
+    }
+
+    .project:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: var(--image) center/cover;
+      transition: transform .7s
+    }
+
+    .project:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(5, 7, 10, .94), transparent 70%)
+    }
+
+    .project:hover:before {
+      transform: scale(1.08)
+    }
+
+    .project-info {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px
+    }
+
+    .project-info small {
+      color: var(--gold);
+      font-size: .65rem;
+      letter-spacing: .16em;
+      font-weight: 900
+    }
+
+    .project-info h3 {
+      font-size: 1.4rem;
+      margin: 7px 0
+    }
+
+    .project-info p {
+      font-size: .8rem;
+      color: #c3c6cb
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px
+    }
+
+    .social-note {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: linear-gradient(100deg, rgba(201, 169, 110, .08), transparent);
+      margin-top: 30px
+    }
+
+    .social-note p {
+      color: var(--muted);
+      font-size: .9rem
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px
+    }
+
+    .contact-copy h2 {
+      margin-bottom: 20px
+    }
+
+    .contact-copy>p {
+      color: var(--muted);
+      margin-bottom: 30px
+    }
+
+    .contact-line {
+      padding: 18px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .contact-line small {
+      display: block;
+      color: var(--gold);
+      font-size: .65rem;
+      letter-spacing: .14em;
+      margin-bottom: 5px
+    }
+
+    .contact-line strong {
+      font-size: 1rem
+    }
+
+    .contact-line a:hover {
+      color: var(--gold)
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .field.full {
+      grid-column: 1/-1
+    }
+
+    label {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      font-weight: 800;
+      color: #d5d6d9
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      background: #11151b;
+      border: 1px solid var(--line);
+      padding: 14px;
+      color: var(--text);
+      outline: none;
+      border-radius: 0
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--gold)
+    }
+
+    textarea {
+      min-height: 135px;
+      resize: vertical
+    }
+
+    .form-note {
+      font-size: .75rem;
+      color: var(--muted);
+      grid-column: 1/-1
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 38px 0 24px;
+      background: #07090c
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 30px
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .72rem;
+      color: var(--muted)
+    }
+
+    .footer-nav a:hover {
+      color: var(--gold)
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #858a92;
+      font-size: .68rem
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .8s ease, transform .8s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--gold);
+      background: rgba(9, 11, 15, .88);
+      color: var(--gold);
+      z-index: 10;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s
+    }
+
+    .back-top.show {
+      opacity: 1;
+      pointer-events: auto
+    }
+
+    @media(max-width:1050px) {
+      .nav-links {
+        gap: 13px
+      }
+
+      .nav-links a {
+        font-size: .61rem
+      }
+
+      .nav-cta {
+        display: none
+      }
+
+      .intro-grid,
+      .founder-grid {
+        gap: 42px
+      }
+
+      .sector {
+        grid-template-columns: 55px 1fr 1.1fr 30px
+      }
+
+      .contact-grid {
+        gap: 40px
+      }
+    }
+
+    @media(max-width:800px) {
+      .wrap {
+        width: min(100% - 36px, var(--max))
+      }
+
+      .section {
+        padding: 78px 0
+      }
+
+      .nav {
+        height: 72px
+      }
+
+      .menu-toggle {
+        display: block
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(9, 11, 15, .98);
+        padding: 18px 24px 25px;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: .75rem
+      }
+
+      .hero-content {
+        padding-top: 120px
+      }
+
+      .hero-bottom {
+        bottom: 18px
+      }
+
+      .hero-bottom .hero-index {
+        display: none
+      }
+
+      .intro-grid,
+      .founder-grid,
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .intro-art {
+        min-height: 400px;
+        margin-right: 12px;
+        margin-bottom: 12px
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr
+      }
+
+      .person {
+        min-height: unset
+      }
+
+      .person-avatar {
+        height: 90px
+      }
+
+      .sector {
+        grid-template-columns: 35px 1fr 25px;
+        gap: 12px;
+        padding: 23px 0
+      }
+
+      .sector p {
+        grid-column: 2/3;
+        grid-row: 2
+      }
+
+      .sector-arrow {
+        grid-column: 3;
+        grid-row: 1/3
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 25px
+      }
+
+      .timeline:before {
+        left: 5px;
+        right: auto;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        height: auto
+      }
+
+      .milestone {
+        padding: 0 0 0 30px
+      }
+
+      .milestone:before {
+        top: 4px
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 230px
+      }
+
+      .project:first-child {
+        grid-row: span 1;
+        grid-column: span 2;
+        min-height: 280px
+      }
+
+      .social-note,
+      .footer-top,
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:480px) {
+      .wrap {
+        width: calc(100% - 28px)
+      }
+
+      .brand-name {
+        font-size: .75rem
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 16vw, 4.5rem)
+      }
+
+      .hero p {
+        font-size: .95rem
+      }
+
+      .hero-actions .btn {
+        width: 100%
+      }
+
+      .hero-bottom {
+        font-size: .55rem
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 230px
+      }
+
+      .project:first-child {
+        grid-column: auto
+      }
+
+      .intro-art {
+        min-height: 320px
+      }
+
+      form {
+        grid-template-columns: 1fr
+      }
+
+      .field.full,
+      .form-note {
+        grid-column: auto
+      }
+
+      .footer-nav {
+        gap: 12px
+      }
+
+      .word-strip {
+        gap: 10px 12px
+      }
+
+      .word-strip span:after {
+        margin-left: 10px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *:before,
+      *:after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar"></div>
+  <header id="header" class="scrolled">
+    <div class="wrap nav">
+      <a class="brand" href="#ana-sayfa" aria-label="Özyakışır Group ana sayfa">
+        <div class="brand-mark"><span>Ö</span></div>
+        <div class="brand-name">ÖZYAKIŞIR<small>GROUP</small></div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#ana-sayfa">ANA SAYFA</a><a href="#hakkimizda">GRUP HAKKINDA</a><a href="#yonetim">YÖNETİM</a><a
+          href="#faaliyetler">FAALİYET ALANLARI</a><a href="#projeler">PROJELER</a><a href="#iletisim">İLETİŞİM</a>
+      </nav>
+      <a class="btn nav-cta" href="#iletisim">BİZİMLE İLETİŞİME GEÇ ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="ana-sayfa">
+      <div class="wrap hero-content">
+        <div class="hero-kicker eyebrow">ÖZYAKIŞIR GROUP · GELECEĞE YÖN VEREN VİZYON</div>
+        <h1>GELECEĞE<br><span>Yön Veriyoruz.</span></h1>
+        <p>Otomotiv, gayrimenkul, inşaat, ticaret ve yatırım alanlarındaki güçlü vizyonumuzla geleceğin değerlerini inşa
+          etmeyi hedefliyoruz.</p>
+        <div class="hero-actions"><a class="btn" href="#faaliyetler">FAALİYET ALANLARIMIZ <span>↗</span></a><a
+            class="btn outline" href="#hakkimizda">GRUBU KEŞFET</a></div>
+      </div>
+      <div class="wrap hero-bottom">
+        <div class="scroll-cue">KEŞFETMEK İÇİN KAYDIR</div>
+        <div class="hero-index">01 / 05 — VİZYON</div>
+      </div>
+    </section>
+
+    <section class="section" id="hakkimizda">
+      <div class="wrap intro-grid">
+        <div class="intro-art reveal visible">
+          <div class="art-label">VİZYON · GÜVEN · KALICI DEĞER</div>
+        </div>
+        <div class="intro-copy reveal visible">
+          <div class="eyebrow">GRUP HAKKINDA</div>
+          <h2>BİR İSİMDEN <span class="gold">DAHA FAZLASI.</span></h2>
+          <p>ÖZYAKIŞIR GROUP; otomotiv, gayrimenkul, inşaat, ticaret ve yatırım alanlarında faaliyet gösteren, geleceğe
+            değer katmayı hedefleyen modern bir grup şirketidir.</p>
+          <p>Farklı sektörlerdeki bilgi birikimini, girişimcilik anlayışını ve uzmanlığı bir araya getirerek güçlü ve
+            sürdürülebilir bir yapı oluşturmayı hedefliyoruz.</p>
+          <p>Bizim için başarı yalnızca büyümek değil; güven oluşturmak, değer üretmek ve geleceğe kalıcı eserler
+            bırakmaktır.</p>
+          <div class="word-strip">
+            <span>GÜVEN</span><span>VİZYON</span><span>KALİTE</span><span>GELİŞİM</span><span>DEĞER</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sectors" id="faaliyetler">
+      <div class="wrap">
+        <div class="section-head reveal visible">
+          <div>
+            <div class="eyebrow">FAALİYET ALANLARIMIZ</div>
+            <h2>FARKLI ALANLAR.<br><span class="gold">TEK BİR VİZYON.</span></h2>
+          </div>
+          <p class="lead">Uzmanlıkları bir araya getiriyor, fırsatları uzun vadeli değere dönüştürmeyi hedefliyoruz.</p>
+        </div>
+        <div class="sector-list">
+          <a class="sector reveal visible" href="#projeler">
+            <div class="sector-num">01 /</div>
+            <h3>ÖZYAKIŞIR <span class="gold">GAYRİMENKUL</span></h3>
+            <p>Gayrimenkul danışmanlığı, yatırım, satış, kiralama, portföy yönetimi ve proje geliştirme.</p>
+            <div class="sector-arrow">↗</div>
+          </a>
+          <a class="sector reveal visible" href="#projeler">
+            <div class="sector-num">02 /</div>
+            <h3>ÖZYAKIŞIR <span class="gold">İNŞAAT</span></h3>
+            <p>Modern yaşam alanları, konut projeleri, ticari yapılar ve mühendislik odaklı çözümler.</p>
+            <div class="sector-arrow">↗</div>
+          </a>
+          <a class="sector reveal visible" href="#projeler">
+            <div class="sector-num">03 /</div>
+            <h3>ÖZYAKIŞIR <span class="gold">OTOMOTİV</span></h3>
+            <p>Premium araç alım-satım ve otomotiv çözümleri için güven odaklı yaklaşım.</p>
+            <div class="sector-arrow">↗</div>
+          </a>
+          <a class="sector reveal visible" href="#projeler">
+            <div class="sector-num">04 /</div>
+            <h3>TİCARET <span class="gold">&amp; YATIRIM</span></h3>
+            <p>Stratejik ticari faaliyetler, yeni fırsatlar ve geleceğe yönelik yatırım hedefleri.</p>
+            <div class="sector-arrow">↗</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section founder" id="kurucumuz">
+      <div class="wrap founder-grid">
+        <div class="" role="img" aria-label="Kurucu portresi için değiştirilebilir görsel alanı">
+          <img src="img.jpg" alt="Orhan Özyakışır">
+        </div>
+        <div class="founder-copy reveal visible">
+          <div class="eyebrow">KURUCUMUZ</div>
+          <h2>VİZYONUN<br>ARKASINDAKİ <span class="gold">İSİM.</span></h2>
+          <div class="founder-name">ORHAN ÖZYAKIŞIR</div>
+          <div class="founder-role">ÖZYAKIŞIR GROUP KURUCU</div>
+          <p>Orhan Özyakışır’ın girişimcilik anlayışı ve ticari vizyonu doğrultusunda şekillenen ÖZYAKIŞIR GROUP, farklı
+            sektörlerde güçlü ve sürdürülebilir bir yapı oluşturmayı hedeflemektedir. Güven, ticari tecrübe, gelişim ve
+            uzun vadeli değer üretme anlayışı grubun temel yaklaşımını oluşturmaktadır.</p>
+          <a class="btn outline" href="tel:+905325082736">KURUCU İLE İLETİŞİM ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="yonetim">
+      <div class="wrap">
+        <div class="section-head reveal visible">
+          <div>
+            <div class="eyebrow">YÖNETİM &amp; UZMANLIK EKİBİ</div>
+            <h2>GÜCÜMÜZÜ <span class="gold">BİRLİKTE</span><br>OLUŞTURUYORUZ.</h2>
+          </div>
+          <p class="lead">Farklı uzmanlık alanları, ortak bir hedef: güvenilir hizmet ve sürdürülebilir değer.</p>
+        </div>
+        <div class="team-grid">
+          <article class="person reveal visible">
+            <div class="person-avatar">Ö</div>
+            <h3>ORHAN ÖZYAKIŞIR</h3>
+            <div class="role">KURUCU</div>
+            <p>Girişimcilik anlayışı ve uzun vadeli değer üretme odağı.</p>
+            <div class="person-actions"><a href="tel:+905325082736">ARA ↗</a><a href="https://wa.me/905325082736"
+                target="_blank" rel="noopener">WHATSAPP ↗</a></div>
+          </article>
+          <article class="person reveal visible">
+            <div class="person-avatar">DÖ</div>
+            <h3>DEVRAN ÖZYAKIŞIR</h3>
+            <div class="role">GAYRİMENKUL DANIŞMANI</div>
+            <p>Gayrimenkul yatırımları, satış, kiralama ve portföy yönetimi.</p>
+            <div class="person-actions"><a href="tel:+905527833436">ARA ↗</a><a href="https://wa.me/905527833436"
+                target="_blank" rel="noopener">WHATSAPP ↗</a></div>
+          </article>
+          <article class="person reveal visible">
+            <div class="person-avatar">OÖ</div>
+            <h3>OZAN ÖZYAKIŞIR</h3>
+            <div class="role">İNŞAAT MÜHENDİSİ</div>
+            <p>İnşaat projeleri, teknik süreçler, proje uygulamaları ve mühendislik.</p>
+            <div class="person-actions"><a href="tel:+905384751936">ARA ↗</a><a href="https://wa.me/905384751936"
+                target="_blank" rel="noopener">WHATSAPP ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision">
+      <div class="wrap reveal visible">
+        <div class="eyebrow">GELECEK PERSPEKTİFİ</div>
+        <h2>BUGÜNÜN FIRSATLARINI,<br><span>YARININ DEĞERLERİNE</span><br>DÖNÜŞTÜRÜYORUZ.</h2>
+      </div>
+    </section>
+
+    <section class="section" id="degerler">
+      <div class="wrap">
+        <div class="eyebrow">KURUMSAL DEĞERLER</div>
+        <h2>BİZİ BİZ YAPAN <span class="gold">DEĞERLER.</span></h2>
+        <div class="values-grid">
+          <article class="value reveal visible">
+            <div class="num">01 — TEMEL</div>
+            <h3>GÜVEN</h3>
+            <p>Her iş ilişkisinin temelinde güven ve şeffaflık vardır.</p>
+          </article>
+          <article class="value reveal visible">
+            <div class="num">02 — YÖN</div>
+            <h3>VİZYON</h3>
+            <p>Bugünü değerlendirirken geleceği planlarız.</p>
+          </article>
+          <article class="value reveal visible">
+            <div class="num">03 — SÜREÇ</div>
+            <h3>GELİŞİM</h3>
+            <p>Sürekli öğrenir, yenilikleri takip ederiz.</p>
+          </article>
+          <article class="value reveal visible">
+            <div class="num">04 — STANDART</div>
+            <h3>KALİTE</h3>
+            <p>Her projede yüksek standartları hedefleriz.</p>
+          </article>
+          <article class="value reveal visible">
+            <div class="num">05 — ETKİ</div>
+            <h3>DEĞER</h3>
+            <p>Yaptığımız her işte kalıcı değer üretmeyi amaçlarız.</p>
+          </article>
+          <article class="value reveal visible">
+            <div class="num">06 — GELECEK</div>
+            <h3>ÜRETİM</h3>
+            <p>İnşa ediyor, geliştiriyor ve geleceğe değer bırakıyoruz.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hikaye">
+      <div class="wrap">
+        <div class="eyebrow">GRUP HİKÂYESİ</div>
+        <h2>BİR FİKİRDEN, <span class="gold">BİR GRUBA.</span></h2>
+        <p class="lead" style="margin-top:18px">Bir sonraki adımı hedefleyen, gelişime açık bir yolculuk.</p>
+        <div class="timeline">
+          <div class="milestone reveal visible">
+            <h3>BAŞLANGIÇ</h3>
+            <p>Girişimcilik ve ticari faaliyetlerle başlayan yolculuk.</p>
+          </div>
+          <div class="milestone reveal visible">
+            <h3>BÜYÜME</h3>
+            <p>Yeni faaliyet alanlarının oluşturulması.</p>
+          </div>
+          <div class="milestone reveal visible">
+            <h3>GELİŞİM</h3>
+            <p>Otomotiv, gayrimenkul ve inşaat alanlarında gelişim hedefi.</p>
+          </div>
+          <div class="milestone reveal visible">
+            <h3>BUGÜN</h3>
+            <p>Farklı uzmanlıkları bir araya getiren grup yaklaşımı.</p>
+          </div>
+          <div class="milestone reveal visible">
+            <h3>GELECEK</h3>
+            <p>Yeni yatırımlar, projeler ve daha büyük hedefler.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="projeler">
+      <div class="wrap">
+        <div class="section-head reveal visible">
+          <div>
+            <div class="eyebrow">ŞİRKETLERİMİZ &amp; PORTFÖY</div>
+            <h2>TEK BİR VİZYON.<br><span class="gold">FARKLI GÜÇLER.</span></h2>
+          </div>
+          <p class="lead">Gayrimenkulden otomotive, inşaattan yatırıma uzanan faaliyet alanlarımızı keşfedin. Proje
+            görselleri örnek amaçlıdır; gerçek portföyünüzle değiştirilebilir.</p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="project reveal visible"
+            style="--image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85')">
+            <div class="project-info"><small>01 / GAYRİMENKUL</small>
+              <h3>Yaşam Alanları</h3>
+              <p>Modern konutlar ve gayrimenkul çözümleri.</p><a class="project-link" href="#iletisim">DETAYLI İNCELE
+                ↗</a>
+            </div>
+          </article>
+          <article class="project reveal visible"
+            style="--image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=900&amp;q=85')">
+            <div class="project-info"><small>02 / İNŞAAT</small>
+              <h3>Mimari &amp; Yapı</h3>
+              <p>Geleceğe uzanan yapılar.</p><a class="project-link" href="#iletisim">DETAYLI İNCELE ↗</a>
+            </div>
+          </article>
+          <article class="project reveal visible"
+            style="--image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=900&amp;q=85')">
+            <div class="project-info"><small>03 / OTOMOTİV</small>
+              <h3>Otomotiv Dünyası</h3>
+              <p>Premium otomotiv yaklaşımı.</p><a class="project-link" href="#iletisim">DETAYLI İNCELE ↗</a>
+            </div>
+          </article>
+          <article class="project reveal visible"
+            style="--image:url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&amp;fit=crop&amp;w=900&amp;q=85')">
+            <div class="project-info"><small>04 / YATIRIM</small>
+              <h3>Gelecek Fırsatları</h3>
+              <p>Stratejik düşünce ve yeni girişimler.</p><a class="project-link" href="#iletisim">DETAYLI İNCELE ↗</a>
+            </div>
+          </article>
+          <article class="project reveal visible"
+            style="--image:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=900&amp;q=85')">
+            <div class="project-info"><small>05 / TİCARET</small>
+              <h3>Yeni Ufuklar</h3>
+              <p>Gelişime açık ticari faaliyetler.</p><a class="project-link" href="#iletisim">DETAYLI İNCELE ↗</a>
+            </div>
+          </article>
+        </div>
+        <div class="social-note reveal visible">
+          <div>
+            <div class="eyebrow">BİZİ TAKİP EDİN</div>
+            <p>ÖZYAKIŞIR GROUP’un güncel projelerini ve gelişmelerini takip edin.</p>
+          </div>
+          <div><strong>RESMİ SOSYAL MEDYA HESAPLARIMIZ YAKINDA.</strong>
+            <p style="margin-top:5px;font-size:.75rem">Yalnızca doğrulanmış hesaplar yayınlanacaktır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="iletisim">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal visible">
+          <div class="eyebrow">İLETİŞİM</div>
+          <h2>BİRLİKTE <span class="gold">DAHA İLERİ.</span></h2>
+          <p>Proje, gayrimenkul ve iş birliği talepleriniz için bizimle iletişime geçin.</p>
+          <div class="contact-line"><small>ORHAN ÖZYAKIŞIR · KURUCU</small><strong><a href="tel:+905325082736">0532 508
+                27 36</a></strong></div>
+          <div class="contact-line"><small>DEVRAN ÖZYAKIŞIR · GAYRİMENKUL DANIŞMANI</small><strong><a
+                href="tel:+905527833436">0552 783 34 36</a></strong></div>
+          <div class="contact-line"><small>OZAN ÖZYAKIŞIR · İNŞAAT MÜHENDİSİ</small><strong><a
+                href="tel:+905384751936">0538 475 19 36</a></strong></div>
+          <div class="contact-line"><small>ADRES</small><strong>Ferhatpaşa,Elmaksan Sk. No:18 ,34888
+              Ataşehir/İstanbul</strong>
+          </div>
+          <div class="contact-line"><small>E-POSTA</small><strong>devran_ozyakisir@hotmail.com</strong></div>
+        </div>
+        <div class="reveal visible">
+          <form id="contactForm">
+            <div class="field"><label for="name">AD SOYAD</label><input id="name" name="name" required=""
+                placeholder="Adınız ve soyadınız"></div>
+            <div class="field"><label for="phone">TELEFON</label><input id="phone" name="phone" type="tel" required=""
+                placeholder="05xx xxx xx xx"></div>
+            <div class="field"><label for="email">E-POSTA</label><input id="email" name="email" type="email"
+                placeholder="ornek@eposta.com"></div>
+            <div class="field"><label for="subject">KONU</label><select id="subject" name="subject">
+                <option>Gayrimenkul</option>
+                <option>İnşaat</option>
+                <option>Otomotiv</option>
+                <option>Ticaret &amp; Yatırım</option>
+                <option>İş birliği</option>
+                <option>Diğer</option>
+              </select></div>
+            <div class="field full"><label for="message">MESAJINIZ</label><textarea id="message" name="message"
+                required="" placeholder="Size nasıl yardımcı olabiliriz?"></textarea></div>
+            <p class="form-note">Bu form taslak arayüzdür. Mesaj gönderiminin çalışması için bir e-posta servisi veya
+              sunucu bağlantısı eklenmelidir.</p>
+            <div class="field full"><button class="btn" type="submit">MESAJ TASLAĞINI OLUŞTUR ↗</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="#ana-sayfa">
+          <div class="brand-mark"><span>Ö</span></div>
+          <div class="brand-name">ÖZYAKIŞIR<small>GROUP</small></div>
+        </a>
+        <div class="footer-nav"><a href="#ana-sayfa">Ana Sayfa</a><a href="#hakkimizda">Grup Hakkında</a><a
+            href="#yonetim">Yönetim</a><a href="#faaliyetler">Faaliyet Alanları</a><a href="#projeler">Projeler</a><a
+            href="#iletisim">İletişim</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 ÖZYAKIŞIR GROUP — Tüm hakları saklıdır.</span><span>GELECEĞE DEĞER
+          KATIYORUZ.</span></div>
+    </div>
+  </footer>
+  <a class="back-top show" id="backTop" href="#ana-sayfa" aria-label="Yukarı çık">↑</a>
+  <script>
+    const header = document.getElementById('header');
+    const backTop = document.getElementById('backTop');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+      backTop.classList.toggle('show', window.scrollY > 500);
+    }, { passive: true });
+
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const subject = encodeURIComponent('ÖZYAKIŞIR GROUP web sitesi - ' + (form.get('subject') || 'İletişim'));
+      const body = encodeURIComponent(
+        'Ad Soyad: ' + form.get('name') + '\\n' +
+        'Telefon: ' + form.get('phone') + '\\n' +
+        'E-posta: ' + (form.get('email') || '-') + '\\n' +
+        'Konu: ' + form.get('subject') + '\\n\\n' +
+        'Mesaj: ' + form.get('message')
+      );
+      alert('Form alanları hazırlandı. Gerçek gönderim için şirket e-posta adresi eklenmelidir. Şimdilik telefon veya WhatsApp bağlantılarını kullanabilirsiniz.');
+      // E-posta adresi netleştiğinde aşağıdaki satırın yorumunu kaldırıp adresi değiştirin:
+      // window.location.href = `mailto:info@ornek.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+
+</body>
+
+</html>
