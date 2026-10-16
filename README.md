@@ -1,0 +1,2 @@
+# emlaksite.html
+reklam sitesi
